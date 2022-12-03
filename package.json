@@ -1,0 +1,17 @@
+{
+  "name": "colombiacongusto",
+  "version": "0.0.0",
+  "description": "-",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "rollup": "^3.5.1"
+  },
+  "dependencies": {
+    "pageable": "^0.6.8"
+  }
+}
