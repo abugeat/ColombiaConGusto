@@ -12,6 +12,6 @@
     "rollup": "^3.5.1"
   },
   "dependencies": {
-    "pageable": "^0.6.8"
+    "fullpage.js": "^4.0.15"
   }
 }

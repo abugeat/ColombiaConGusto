@@ -3,10 +3,57 @@
 <head>
     <title>Colombia con Gusto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./node_modules/fullpage.js/dist/fullpage.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="steps">
+        <button type="button" class="step" id="step1">Santa Marta</button>
+        <button type="button" class="step" id="step2">Tayrona</button>
+        <button type="button" class="step" id="step3">Cartagena</button>
+        <button type="button" class="step" id="step4">Providencia y San Andres</button>
+        <button type="button" class="step" id="step5">Medellin</button>
+        <button type="button" class="step" id="step6">Bogota</button>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="moment">
+                <div class="dia">Dia 1</div>
+                <div class="location">Santa Marta</div>
+                <div class="description">Un dimanche à Santa Marta</div>
+            </div>
+            <div class="wrapper">
+                <video class="vid" autoplay muted="false"> <!-- muted autoplay loop controls -->
+                    <source src="videos/santamartamango.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="moment">
+                <div class="dia">Dia 2</div>
+                <div class="location">Tayrona</div>
+                <div class="description">Petite sieste dans la jungle</div>
+            </div>
+            <div class="wrapper">
+                <video class="vid" muted="false"> <!-- muted autoplay loop controls -->
+                    <source src="videos/hammock.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="moment">
+                <div class="dia">Dia 3</div>
+                <div class="location">Santa Marta</div>
+                <div class="description">Un dimanche à Santa Marta</div>
+            </div>
+            <div class="wrapper">
+                <video class="vid" muted="false"> <!-- muted autoplay loop controls -->
+                    <source src="videos/santamartamango.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./node_modules/fullpage.js/dist/fullpage.js"></script>
     <script type="module" src="./bundle.js"></script>
-    
 </body>
 </html>
