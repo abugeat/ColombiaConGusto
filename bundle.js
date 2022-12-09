@@ -10,7 +10,7 @@ new fullpage('#fullpage', {
     afterLoad: function(origin, destination, direction, trigger) {
         // End origin video
         let lastvideo;
-        if (trigger) {
+        if (trigger) { 
             lastvideo = document.querySelector("#section" + (origin.index) + " video");
             lastvideo.pause();
             lastvideo.currentTime = 0;
@@ -24,3 +24,7 @@ new fullpage('#fullpage', {
 // Add 
 
 // check https://alvarotrigo.com/fullPage/docs/#movetosection-slide
+
+// check:
+// https://pagespeedchecklist.com/on-demand-embedded-videos
+// https://css-tricks.com/what-does-playsinline-mean-in-web-video/
