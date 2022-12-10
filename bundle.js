@@ -9,6 +9,7 @@ new fullpage('#fullpage', {
     // },
     afterLoad: function(origin, destination, direction) {
         // End origin video
+
         let lastvideo;
         if (direction) { 
             lastvideo = document.querySelector("#section" + (origin.index) + " video");
@@ -26,6 +27,18 @@ new fullpage('#fullpage', {
     // }
     // onLoad?
 });
+
+
+// Next section when video ended
+const videos = document.querySelectorAll('.vid');
+for (let i=0; i<videos.length; i++) {
+    videos[i].addEventListener('ended', (event) => {
+        fullpage_api.moveSectionDown();
+    });
+}
+
+
+
 
 // Add "fullpage_api.moveTo(i)" button for each section
 // Add 
