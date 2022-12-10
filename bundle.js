@@ -7,6 +7,10 @@ new fullpage('#fullpage', {
         nextvideo.play();
     },
     afterLoad: function(origin, destination, direction) {
+        if (destination.index==0 && origin.index==0) {
+            let startvideo = document.querySelector("#section" + (destination.index) + " video"); 
+            startvideo.play();
+        }
         // End origin video
         let originvideo;
         if (direction) { 
@@ -34,6 +38,18 @@ for (let i=0; i<videos.length; i++) {
         fullpage_api.moveSectionDown();
     });
 }
+
+// Start
+const startbtn = document.getElementById("start");
+startbtn.addEventListener('click', () =>{
+    fullpage_api.moveSectionDown();
+    videos[1].play();
+    for (let i=2; i<videos.length; i++) {
+        videos[i].play();
+        videos[i].pause();
+        videos[i].currentTime = 0;
+    }
+});
 
 
 
