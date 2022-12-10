@@ -1,3 +1,12 @@
+let mobiledevice;
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    mobiledevice = true;
+} else {
+    // false for not mobile device
+    mobiledevice = false;
+}
+
 var myFullpage = new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
@@ -43,11 +52,13 @@ for (let i=0; i<videos.length; i++) {
 const startbtn = document.getElementById("start");
 startbtn.addEventListener('click', () =>{
     fullpage_api.moveSectionDown();
-    videos[1].play();
-    for (let i=2; i<videos.length; i++) {
-        videos[i].play();
-        videos[i].pause();
-        videos[i].currentTime = 0;
+    if (mobiledevice==false) {
+        videos[1].play();
+        for (let i=2; i<videos.length; i++) {
+            videos[i].play();
+            videos[i].pause();
+            videos[i].currentTime = 0;
+        }
     }
 });
 
