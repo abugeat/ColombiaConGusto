@@ -15,7 +15,7 @@ var myFullpage = new fullpage('#fullpage', {
             lastvideo.pause();
             lastvideo.currentTime = 0;
         }
-        
+        alert ("afterLoad triggered!");        
     }
     // onLoad?
 });
