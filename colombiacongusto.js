@@ -1,20 +1,18 @@
 var myFullpage = new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
-    // onLeave: function(origin, destination, direction) {        
-    //     // Start destination video
-    //     // let video = document.getElementById("video"+destination.index);
-    //     let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
-    //     nextvideo.play();
-    // },
+    onLeave: function(origin, destination, direction) {        
+        // Start destination video
+        let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
+        nextvideo.play();
+    },
     afterLoad: function(origin, destination, direction) {
         // End origin video
-
-        let lastvideo;
+        let originvideo;
         if (direction) { 
-            lastvideo = document.querySelector("#section" + (origin.index) + " video");
-            lastvideo.pause();
-            lastvideo.currentTime = 0;
+            originvideo = document.querySelector("#section" + (origin.index) + " video");
+            originvideo.pause();
+            originvideo.currentTime = 0;
         }       
     }
     // onLeave: function(origin, destination, direction) {
