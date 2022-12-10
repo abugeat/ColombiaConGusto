@@ -1,12 +1,12 @@
 var myFullpage = new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
-    onLeave: function(origin, destination, direction) {        
-        // Start destination video
-        // let video = document.getElementById("video"+destination.index);
-        let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
-        nextvideo.play();
-    },
+    // onLeave: function(origin, destination, direction) {        
+    //     // Start destination video
+    //     // let video = document.getElementById("video"+destination.index);
+    //     let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
+    //     nextvideo.play();
+    // },
     afterLoad: function(origin, destination, direction, trigger) {
         // End origin video
         let lastvideo;
