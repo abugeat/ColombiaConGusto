@@ -7,15 +7,22 @@ new fullpage('#fullpage', {
     //     let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
     //     nextvideo.play();
     // },
-    afterLoad: function(origin, destination, direction, trigger) {
-        // End origin video
+    // afterLoad: function(origin, destination, direction, trigger) {
+    //     // End origin video
+    //     let lastvideo;
+    //     if (trigger) { 
+    //         lastvideo = document.querySelector("#section" + (origin.index) + " video");
+    //         lastvideo.pause();
+    //         lastvideo.currentTime = 0;
+    //     }       
+    // }
+    onLeave: function(origin, destination, direction) {
         let lastvideo;
-        if (trigger) { 
+        if (direction) { 
             lastvideo = document.querySelector("#section" + (origin.index) + " video");
             lastvideo.pause();
             lastvideo.currentTime = 0;
-        }
-        alert ("afterLoad triggered!");        
+        }       
     }
     // onLoad?
 });
