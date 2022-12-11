@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="moment">
+        <div class="dia">Dia 10</div>
+        <div class="location">Santa Marta</div>
+        <div class="description">Un dimanche à Santa Marta</div>
+    </div>
     <div id="steps">
         <button type="button" class="step" id="step1">Santa Marta</button>
         <button type="button" class="step" id="step2">Tayrona</button>
@@ -18,44 +23,41 @@
     </div>
     <div id="fullpage">
         <div class="section" id="section0"> 
-            <div class="moment">
-                <div class="dia">Dia 1</div>
-                <div class="location">Santa Marta</div>
-                <div class="description">Un dimanche à Santa Marta</div>
-            </div>
             <button id="start">Start</button>
             <div class="wrapper"> 
-                <video class="vid" autoplay muted playsinline> <!-- muted autoplay loop controls -->
+                <video class="vid" autoplay playsinline> <!-- muted autoplay loop controls -->
                     <source src="videos/santamartamango.mov" type="video/mp4">
                 </video>
             </div>
         </div>
         <div class="section" id="section1">
-            <div class="moment">
+            <!-- <div class="moment">
                 <div class="dia">Dia 2</div>
                 <div class="location">Tayrona</div>
                 <div class="description">Petite sieste dans la jungle</div>
-            </div>
+            </div> -->
             <div class="wrapper"> 
-                <video class="vid" playsinline> <!-- muted autoplay loop controls -->
-                    <source src="videos/hammock.mov" type="video/mp4">
-                </video>
+                <!-- <video
+                    class="vid"
+                    playsinline
+                    src="videos/hammock.mov"
+                    type="video/mp4">
+                </video> -->
             </div>
         </div>
         <div class="section" id="section2">
-            <div class="moment">
+            <!-- <div class="moment">
                 <div class="dia">Dia 3</div>
                 <div class="location">Santa Marta</div>
                 <div class="description">Un dimanche à Santa Marta</div>
-            </div>
+            </div> -->
             <div class="wrapper">
-                <video class="vid" playsinline> <!-- muted autoplay loop controls -->
+                <!-- <video class="vid" playsinline>
                     <source src="videos/santamartamango.mov" type="video/mp4">
-                </video>
+                </video> -->
             </div>
         </div>
     </div>
-    <!-- <script type="text/javascript" src="/node_modules/fullpage.js/dist/fullpage.js"></script> -->
     <script type="text/javascript" src="fullpage.js"></script>
     <script type="module" src="bundle.js"></script>
 </body>
