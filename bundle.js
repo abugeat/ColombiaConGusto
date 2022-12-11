@@ -7,43 +7,76 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     mobiledevice = false;
 }
 
-const videosList = [
-    // Starting vid is already loaded during init
-    'videos/santamartamango.mov',
-    'videos/hammock.mov',
-    'videos/santamartamango.mov',
-];
+const anchors = {
+    SantaMarta: {
+        name: "Santa Marta",
+        firstSection: 0,
+    },
+    Tayrona: {
+        name: "Tayrona",
+        firstSection: 1,
+    },
+    Cartagena: {
+        name: "Cartagena",
+        firstSection: 3,
+    }
+};
 
 const moments = [
     // Starting moment is already loaded
     {
+        video: 'videos/santamartamango.mov', 
         day: "1",
         location: "Santa Marta",
         description: "Primer dia",
+        anchor: anchors.SantaMarta,
     },
     {
+        video: 'videos/hammock.mov', 
         day: "2",
         location: "Tayrona",
         description: "Siesta en Amazonia",
+        anchor: anchors.Tayrona,
     },
     {
+        video: 'videos/santamartamango.mov', 
         day: "3",
         location: "Pseudo Santa Marta",
         description: "Back to Santa Marta",
-    }
+        anchor: anchors.Tayrona,
+    },
+    {
+        video: 'videos/hammock.mov', 
+        day: "4",
+        location: "Tayrona",
+        description: "Siesta en Amazonia",
+        anchor: anchors.Cartagena,
+    },
+    {
+        video: 'videos/santamartamango.mov', 
+        day: "5",
+        location: "Pseudo Santa Marta",
+        description: "Back to Santa Marta",
+        anchor: anchors.Cartagena,
+    },
+
 ];
 
 
-// Next section when video ended
-// function endedVidEvent() {
-//     let videos = document.querySelectorAll('.vid');
-//     for (let i=0; i<videos.length; i++) {
-//         videos[i].addEventListener('ended', (event) => {
-//             fullpage_api.moveSectionDown();
-//         });
-//     }    
-// }
+// INIT
+// create div for each moment (starting moment is already loaded)
+for (let i = 1; i<moments.length; i++) {
+    let momentdiv = document.createElement("div");
+    momentdiv.className="section";
+    momentdiv.id="section"+i;
+    let wrapperdiv = document.createElement("div");
+    wrapperdiv.className = "wrapper";
+    momentdiv.appendChild(wrapperdiv);
+    let fullpagediv = document.getElementById("fullpage");
+    fullpagediv.appendChild(momentdiv);
+}
 
+// init fullpage
 new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
@@ -53,6 +86,13 @@ new fullpage('#fullpage', {
         nextvideo.play();
         // Change moment description
         updateMomentDescription(destination.index);
+        // Change current button if new anchor
+        if (moments[origin.index].anchor != moments[destination.index].anchor) {
+            let previousbutton = document.getElementById(moments[origin.index].anchor.name);
+            previousbutton.removeAttribute("current");
+            let nextbutton = document.getElementById(moments[destination.index].anchor.name);
+            nextbutton.setAttribute("current",true);
+        }
     },
     afterLoad: function(origin, destination, direction) {
         if (destination.index==0 && origin.index==0) {
@@ -69,17 +109,26 @@ new fullpage('#fullpage', {
     }
 });
 
-// let startvideo = document.querySelector("#section0 video");
-// startvideo.addEventListener('playing', (event) => {
-//     if (mobiledevice) {  
-//         // for (let i=1; i<videos.length; i++) {
-//         //     videos[i].play();
-//         //     videos[i].pause();
-//         //     videos[i].currentTime = 0;
-//         // }
-//         fullpage_api.moveSectionDown();
-//     }
-// });
+// create anchor buttons
+let stepsdiv = document.getElementById("steps");
+for (let anchor in anchors) {
+    let anchorButton = document.createElement("button");
+    anchorButton.className = "step";
+    anchorButton.type = "button";
+    anchorButton.id = anchors[anchor].name;
+    anchorButton.innerHTML = anchors[anchor].name;
+    anchorButton.addEventListener('click', (event) => {
+        fullpage_api.moveTo(anchors[anchor].firstSection+1);
+    });
+    // set current button
+    if (anchors[anchor].firstSection == 0) {
+        anchorButton.setAttribute("current", true);
+    }
+    stepsdiv.appendChild(anchorButton);
+}
+    
+    
+
 
 
 // Start button
@@ -110,12 +159,11 @@ if (mobiledevice==false) {
 }
 
 
-
-
+ 
 function loadVideos() {
-    for (let i=1; i<3; i++) {
+    for (let i=1; i<moments.length; i++) {
         let video = document.createElement('video');
-        video.src = videosList[i];
+        video.src = moments[i].video;
         video.playsInline = true;
         video.className = "vid";
         // ended video event (go to next video)
@@ -129,6 +177,7 @@ function loadVideos() {
     }
 }
 
+
 function updateMomentDescription(i) {
     // change day
     let day = document.querySelector(".moment .dia");
@@ -141,14 +190,10 @@ function updateMomentDescription(i) {
     description.innerHTML = moments[i].description;
 }
 
-//
 
 
-// Add "fullpage_api.moveTo(i)" button for each section
-// Add 
-
-// check https://alvarotrigo.com/fullPage/docs/#movetosection-slide
 
 // check:
+// https://alvarotrigo.com/fullPage/docs/#movetosection-slide
 // https://pagespeedchecklist.com/on-demand-embedded-videos
 // https://css-tricks.com/what-does-playsinline-mean-in-web-video/
