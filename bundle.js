@@ -33,6 +33,17 @@ const moments = [
     }
 ];
 
+
+// Next section when video ended
+// function endedVidEvent() {
+//     let videos = document.querySelectorAll('.vid');
+//     for (let i=0; i<videos.length; i++) {
+//         videos[i].addEventListener('ended', (event) => {
+//             fullpage_api.moveSectionDown();
+//         });
+//     }    
+// }
+
 new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
@@ -85,7 +96,18 @@ startbtn.addEventListener('click', () =>{
     loadVideos();
 });
 // start trip auto with non mobile device
-if (mobiledevice==false) {startbtn.click();}
+if (mobiledevice==false) {
+    startbtn.click();
+} else {
+    // start trip auto if first video play!
+    let startvideo = document.querySelector("#section0 video");
+    startvideo.addEventListener('playing', (event) => {
+        startbtn.click();
+    });    
+}
+
+
+
 
 function loadVideos() {
     for (let i=1; i<3; i++) {
