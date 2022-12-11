@@ -102,7 +102,10 @@ if (mobiledevice==false) {
     // start trip auto if first video play!
     let startvideo = document.querySelector("#section0 video");
     startvideo.addEventListener('playing', (event) => {
-        startbtn.click();
+        let startbtnexist = document.getElementById("start");
+        if (startbtnexist) {
+            startbtn.click();
+        }
     });    
 }
 
