@@ -1,11 +1,4 @@
-let mobiledevice;
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    // true for mobile device
-    mobiledevice = true;
-} else {
-    // false for not mobile device
-    mobiledevice = false;
-}
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
 const anchors = {
     SantaMarta: {
@@ -436,6 +429,8 @@ new fullpage('#fullpage', {
         // Start destination video
         let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
         nextvideo.play();
+        // load near videos
+        loadNearVideos(destination.index);
         // Change moment description
         updateMomentDescription(destination.index);
         // Change current button if new anchor
@@ -470,7 +465,7 @@ for (let anchor in anchors) {
     anchorButton.id = anchors[anchor].name;
     anchorButton.innerHTML = anchors[anchor].name;
     anchorButton.addEventListener('click', (event) => {
-        fullpage_api.moveTo(anchors[anchor].firstSection+1);
+        fullpage_api.silentMoveTo(anchors[anchor].firstSection+1);
     });
     // set current button
     if (anchors[anchor].firstSection == 0) {
@@ -497,25 +492,25 @@ startbtn.addEventListener('click', () =>{
     loadVideos();
 });
 // start trip auto with non mobile device
-if (mobiledevice==false) {
-    startbtn.click();
-} else {
-    // start trip auto if first video play!
-    let startvideo = document.querySelector("#section0 video");
-    startvideo.addEventListener('playing', (event) => {
-        let startbtnexist = document.getElementById("start");
-        if (startbtnexist) {
-            startbtn.click();
-        }
-    });    
-}
+// if (mobiledevice==false) {
+//     startbtn.click();
+// } else {
+//     // start trip auto if first video play!
+//     let startvideo = document.querySelector("#section0 video");
+//     startvideo.addEventListener('playing', (event) => {
+//         let startbtnexist = document.getElementById("start");
+//         if (startbtnexist) {
+//             startbtn.click();
+//         }
+//     });    
+// }
 
 
  
 function loadVideos() {
     for (let i=1; i<moments.length; i++) {
         let video = document.createElement('video');
-        video.src = moments[i].video;
+        // video.src = moments[i].video;
         video.playsInline = true;
         video.className = "vid";
         // ended video event (go to next video)
@@ -525,7 +520,61 @@ function loadVideos() {
         // append video
         let wrappersection = document.querySelector("#section"+i+" .wrapper");
         wrappersection.appendChild(video);
-        
+    }
+    // load near videos sources
+    loadNearVideos(0);
+    // load buttons videos
+    loadAnchorsVideos();
+}
+
+function loadNearVideos(currentVidIndex) {
+    // near videos
+    let nearVids = [currentVidIndex+1,currentVidIndex-1,currentVidIndex+2,currentVidIndex-2];
+    // load near videos if possible
+    for (let vidIndex of nearVids) {
+        let vid = document.querySelector("#section"+ (vidIndex) +" .wrapper"+ " .vid");
+        if (vid != null) {
+            if (vid.src == "" && vidIndex < moments.length && vidIndex>=0) {
+                vid.src = moments[vidIndex].video;
+                // console.log("load " +vidIndex);
+            }
+        }
+    }
+
+    // unload far videos
+    let buttonsVids = [];
+    for (let i in anchors) {
+        buttonsVids.push(anchors[i].firstSection);
+    }
+    for (let i=0; i<moments.length; i++) {
+        if (!buttonsVids.includes(i) && !nearVids.includes(i) && i!=currentVidIndex) {
+            let vid = document.querySelector("#section"+ (i) +" .wrapper"+ " .vid");
+            if (vid != null) {
+                if (vid.src != "") {
+                    vid.removeAttribute('src');
+                    vid.load();
+                    // console.log("unload " +i);
+                }
+            }
+        }
+    }
+
+}
+
+function loadAnchorsVideos() {
+    // buttons videos
+    let buttonsVids = [];
+    for (let i in anchors) {
+        buttonsVids.push(anchors[i].firstSection);
+    }
+    // load buttons videos
+    for (let vidIndex of buttonsVids) {
+        let vid = document.querySelector("#section"+ (vidIndex) +" .wrapper"+ " .vid");
+        if (vid != null) {
+            if (vid.src == "" && vidIndex < moments.length && vidIndex>=0) {
+                vid.src = moments[vidIndex].video;
+            }
+        }
     }
 }
 
