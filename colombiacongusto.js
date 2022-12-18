@@ -24,7 +24,7 @@ const anchors = {
         name: "Isla de Providencia",
         firstSection: 24,
     },
-    SanAndrés: {
+    SanAndres: {
         name: "Isla de San Andrés",
         firstSection: 38,
     },
@@ -311,28 +311,28 @@ const moments = [
         day: "11",
         location: "Isla de San Andrés",
         description: "Beauty check en la secunda isla",
-        anchor: anchors.SanAndrés,
+        anchor: anchors.SanAndres,
     },
     {
         video: 'videos/IMG_40.mov', 
         day: "11",
         location: "Isla de San Andrés",
         description: "El menú está en el techo",
-        anchor: anchors.Providencia,
+        anchor: anchors.SanAndres,
     },
     {
         video: 'videos/IMG_41.mov', 
         day: "11",
         location: "Isla de San Andrés",
         description: "😍",
-        anchor: anchors.Providencia,
+        anchor: anchors.SanAndres,
     },
     {
         video: 'videos/IMG_42.mov', 
         day: "11",
         location: "Isla de San Andrés",
         description: "Terminando el camino en San Andrés antes de ir a Medellín",
-        anchor: anchors.Providencia,
+        anchor: anchors.SanAndres,
     },
     {
         video: 'videos/IMG_43.mov', 
@@ -432,6 +432,7 @@ for (let i = 1; i<moments.length; i++) {
 var myFullpage = new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
+    scrollingSpeed: 1200,
     onLeave: function(origin, destination, direction) {        
         // Start destination video
         let nextvideo = document.querySelector("#section" + (destination.index) + " video"); 
