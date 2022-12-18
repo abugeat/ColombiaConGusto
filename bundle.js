@@ -2,31 +2,31 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 const anchors = {
     SantaMarta: {
-        name: "Santa Marta",
+        name: "⛵ Santa Marta",
         firstSection: 0,
     },
     Tayrona: {
-        name: "Tayrona",
+        name: "🐒 Tayrona",
         firstSection: 3,
     },
     Cartagena: {
-        name: "Cartagena",
+        name: "🌈 Cartagena",
         firstSection: 18,
     },
     Providencia: {
-        name: "Isla de Providencia",
+        name: "🏝️ Isla de Providencia",
         firstSection: 24,
     },
     SanAndres: {
-        name: "Isla de San Andrés",
+        name: "🥥 Isla de San Andrés",
         firstSection: 38,
     },
     Medellin: {
-        name: "Medellín",
+        name: "🌆 Medellín",
         firstSection: 42,
     },
     Bogota: {
-        name: "Bogotá",
+        name: "☕️ Bogotá",
         firstSection: 52,
     },
 };
