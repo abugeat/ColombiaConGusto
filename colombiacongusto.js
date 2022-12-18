@@ -534,6 +534,7 @@ function loadVideos() {
     loadAnchorsVideos();
 }
 
+
 function loadNearVideos(currentVidIndex) {
     // near videos
     let nearVids = [currentVidIndex+1,currentVidIndex-1,currentVidIndex+2,currentVidIndex-2];
