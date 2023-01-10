@@ -1,11 +1,32 @@
+@font-face {
+	font-family: "PAG Smoke";
+	src: url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.eot"); /* IE9*/
+	src: url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.woff2") format("woff2"), /* chrome、firefox */
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.woff") format("woff"), /* chrome、firefox */
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.svg#PAG Smoke W00 Regular") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+	font-family: "Recoleta-Medium";
+	src: url("//db.onlinewebfonts.com/t/09167ab604ebbfb1e7b6328321baf783.eot");
+	src: url("//db.onlinewebfonts.com/t/09167ab604ebbfb1e7b6328321baf783.eot?#iefix") format("embedded-opentype"),
+	url("//db.onlinewebfonts.com/t/09167ab604ebbfb1e7b6328321baf783.woff2") format("woff2"),
+	url("//db.onlinewebfonts.com/t/09167ab604ebbfb1e7b6328321baf783.woff") format("woff"),
+	url("//db.onlinewebfonts.com/t/09167ab604ebbfb1e7b6328321baf783.ttf") format("truetype"),
+	url("//db.onlinewebfonts.com/t/09167ab604ebbfb1e7b6328321baf783.svg#Recoleta-Medium") format("svg");
+}
+
+
 body {
 	margin: 0;
-  }
+	font-family: "Recoleta-Medium", sans-serif;
+}
 
 .section{
 	text-align:center;
 }
-
 /* #section0{
 	background-image: linear-gradient(128deg,#40afff,#3f61ff);
 }
@@ -26,20 +47,32 @@ body {
 	color:white;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
+	width:100%;
+	/* right: 0; */
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	/* align-items: flex-end; */
 	z-index: 1;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.2rem;
+	font-size: 1.2rem;
+
 	/* background: white */
 }
 .dia {
-	font-size: 2rem;
+	font-size: 1rem;
 	color: white;
+	/* text-align: right; */
+}
+.description {
+	/* text-align: right; */
 }
 .location {
-	font-weight: bold;
-	font-size: 2rem;
+	/* font-weight: bold; */
+	font-size: 2.5rem;
+	font-family: "PAG Smoke";
 }
 
 #steps {
@@ -56,10 +89,12 @@ body {
 }
 
 .step {
+	font-family: "Recoleta-Medium", sans-serif;
+	font-size: 0.8rem;
 	color: white;
 	border: 0px solid white;
 	border-radius: 100rem;
-	height:1.5rem;
+	height:1.7rem;
 	padding: 0rem 0.75rem;
 	background-color: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(5px); /*contrast(180%);*/
