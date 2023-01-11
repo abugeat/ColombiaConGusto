@@ -1,5 +1,7 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
+
+
 const anchors = {
     SantaMarta: {
         name: "⛵ Santa Marta",
@@ -149,7 +151,7 @@ const moments = [
         video: 'videos/IMG_17.mov', 
         day: "4",
         location: "Tayrona",
-        description: "El habitacion",
+        description: "La habitacion",
         anchor: anchors.Tayrona,
     },
     {
@@ -282,7 +284,7 @@ const moments = [
         video: 'videos/IMG_36.mov', 
         day: "8, 9 y 10",
         location: "Isla de Providencia",
-        description: "¡Cuidado con los habitantes! 2",
+        description: "¡Cuidado con los habitantes! parte 2",
         anchor: anchors.Providencia,
     },
     {
@@ -401,7 +403,7 @@ const moments = [
         video: 'videos/IMG_53.mov', 
         day: "15",
         location: "Bogotá",
-        description: "Los gorditos de Bodero para el ultimo dia en Colombia",
+        description: "Los gorditos de Botero para el ultimo dia en Colombia",
         anchor: anchors.Bogota,
     },
 
@@ -425,6 +427,7 @@ for (let i = 1; i<moments.length; i++) {
 new fullpage('#fullpage', {
     // sectionsColor: ['whitesmoke'],
     licenseKey: 'gplv3-license',
+    dragAndMove: true,
     scrollingSpeed: 1200,
     onLeave: function(origin, destination, direction) {        
         // Start destination video

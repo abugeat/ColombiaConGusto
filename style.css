@@ -22,6 +22,7 @@
 body {
 	margin: 0;
 	font-family: "Recoleta-Medium", sans-serif;
+	
 }
 
 .section{
@@ -65,14 +66,18 @@ body {
 	font-size: 1rem;
 	color: white;
 	/* text-align: right; */
+	filter: drop-shadow(1px 1px orange);
+
 }
 .description {
 	/* text-align: right; */
+	filter: drop-shadow(1px 1px orange);
 }
 .location {
 	/* font-weight: bold; */
 	font-size: 2.5rem;
 	font-family: "PAG Smoke";
+	filter: drop-shadow(3px 3px orange);
 }
 
 #steps {
@@ -91,6 +96,7 @@ body {
 .step {
 	font-family: "Recoleta-Medium", sans-serif;
 	font-size: 0.8rem;
+	/* filter: drop-shadow(1px 1px orange); */
 	color: white;
 	border: 0px solid white;
 	border-radius: 100rem;
@@ -101,7 +107,7 @@ body {
 	-webkit-backdrop-filter: blur(5px); /*contrast(180%);*/
 }
 .step[current] {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 165, 0, 0.5);
 }
 
 #start {
