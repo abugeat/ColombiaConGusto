@@ -1,6 +1,6 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
-
+  
 
 const anchors = {
     SantaMarta: {
@@ -137,7 +137,7 @@ const moments = [
         video: 'videos/IMG_15.mov', 
         day: "3",
         location: "Tayrona",
-        description: "Paulette?",
+        description: "¿Paulette?",
         anchor: anchors.Tayrona,
     },
     {
@@ -284,7 +284,7 @@ const moments = [
         video: 'videos/IMG_36.mov', 
         day: "8, 9 y 10",
         location: "Isla de Providencia",
-        description: "¡Cuidado con los habitantes! parte 2",
+        description: "¡Cuidado con los habitantes! Parte 2",
         anchor: anchors.Providencia,
     },
     {
@@ -489,25 +489,10 @@ startbtn.addEventListener('click', () =>{
     // start the starting video
     let startvideo = document.querySelector("#section0 video");
     startvideo.play();
-    startvideo.addEventListener('ended', (event) => {
-        fullpage_api.moveSectionDown();
-    });
+    applyVideoSettings(startvideo);
     // load all next videos
     loadVideos();
 });
-// start trip auto with non mobile device
-// if (mobiledevice==false) {
-//     startbtn.click();
-// } else {
-//     // start trip auto if first video play!
-//     let startvideo = document.querySelector("#section0 video");
-//     startvideo.addEventListener('playing', (event) => {
-//         let startbtnexist = document.getElementById("start");
-//         if (startbtnexist) {
-//             startbtn.click();
-//         }
-//     });    
-// }
 
 
  
@@ -515,12 +500,7 @@ function loadVideos() {
     for (let i=1; i<moments.length; i++) {
         let video = document.createElement('video');
         // video.src = moments[i].video;
-        video.playsInline = true;
-        video.className = "vid";
-        // ended video event (go to next video)
-        video.addEventListener('ended', (event) => {
-            fullpage_api.moveSectionDown();
-        });
+        applyVideoSettings(video);
         // append video
         let wrappersection = document.querySelector("#section"+i+" .wrapper");
         wrappersection.appendChild(video);
@@ -596,7 +576,41 @@ function updateMomentDescription(i) {
     description.innerHTML = moments[i].description;
 }
 
+function applyVideoSettings(video) {
+    
+    video.playsInline = true;
+    video.className = "vid";
 
+    // pause the video when touched or clicked
+    video.addEventListener("mousedown", function() {video.pause();});
+    video.addEventListener("mouseup", function() {video.play();});
+
+    // mobile
+    let swiped = false;
+    let touchStartY;
+    let touchMoveY;
+    video.addEventListener("touchstart", function(e) {
+        video.pause();
+        // e.preventDefault();
+        touchStartY = e.touches[0].clientY;
+    });
+    video.addEventListener("touchmove", function(e) {
+        touchMoveY = e.touches[0].clientY;
+        if (touchStartY - touchMoveY > 50) {
+            swiped = true;
+        }
+    });
+    video.addEventListener("touchend", function() {
+        if (!(swiped)) {video.play();}    });
+    video.addEventListener("touchcancel", function() {
+        if (!(swiped)) {video.play();}    });
+
+    // ended video event (go to next video)
+    video.addEventListener('ended', (event) => {
+        fullpage_api.moveSectionDown();
+    });
+
+}
 
 
 // check:

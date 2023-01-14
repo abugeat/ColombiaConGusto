@@ -1,0 +1,19 @@
+@font-face {
+	font-family: "PAG Smoke";
+	src: url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.eot"); /* IE9*/
+	src: url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.woff2") format("woff2"), /* chrome、firefox */
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.woff") format("woff"), /* chrome、firefox */
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url("fontPAGSmoke/f2a1248c2bdf3d533e2ddbe81e9d035c.svg#PAG Smoke W00 Regular") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+	font-family: "Recoleta-Medium";
+	src: url("fontRecoleta/09167ab604ebbfb1e7b6328321baf783.eot");
+	src: url("fontRecoleta/09167ab604ebbfb1e7b6328321baf783.eot?#iefix") format("embedded-opentype"),
+	url("fontRecoleta/09167ab604ebbfb1e7b6328321baf783.woff2") format("woff2"),
+	url("fontRecoleta/09167ab604ebbfb1e7b6328321baf783.woff") format("woff"),
+	url("fontRecoleta/09167ab604ebbfb1e7b6328321baf783.ttf") format("truetype"),
+	url("fontRecoleta/09167ab604ebbfb1e7b6328321baf783.svg#Recoleta-Medium") format("svg");
+}
