@@ -410,7 +410,21 @@ const moments = [
         video: 'videos/IMG_53.mov', 
         day: "15",
         location: "Bogotá",
+        description: "Holá Bogota",
+        anchor: anchors.Bogota,
+    },
+    {
+        video: 'videos/IMG_54.mov', 
+        day: "15",
+        location: "Bogotá",
         description: "Los gorditos de Botero para el ultimo dia en Colombia",
+        anchor: anchors.Bogota,
+    },
+    {
+        video: 'videos/IMG_55.mov', 
+        day: "15",
+        location: "Bogotá",
+        description: "Adios Colombia... 😢",
         anchor: anchors.Bogota,
     },
 
