@@ -504,9 +504,10 @@ for (let anchor in anchors) {
 
 
 // Start button
-const startbtn = document.getElementById("start"); 
+const startbtn = document.getElementById("start");
+const homediv = document.getElementById("home-container");
 startbtn.addEventListener('click', () =>{
-    startbtn.remove();
+    homediv.remove();
     // start the starting video
     let startvideo = document.querySelector("#section0 video");
     startvideo.play();

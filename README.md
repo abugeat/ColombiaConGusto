@@ -4,7 +4,6 @@ https://abugeat.github.io/ColombiaConGusto/
 
 ## TODO
 Videos
-- Add loading spinner
 - Load video of current slide!
 - Add video time selector on horizontal slide ?
 
