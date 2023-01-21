@@ -515,14 +515,23 @@ startbtn.addEventListener('click', () =>{
     loadVideos();
 });
 
-
+function hideSpinner(i) {
+    return function() {
+        let spinner = document.querySelector("#spinner"+i);
+        spinner.style.display = "none";
+    };
+}
  
 function loadVideos() {
     for (let i=1; i<moments.length; i++) {
+        
+        // create video
         let video = document.createElement('video');
+        
         // video.src = moments[i].video;
         applyVideoSettings(video);
-        // append video
+
+        // append video and spinner to wrapper
         let wrappersection = document.querySelector("#section"+i+" .wrapper");
         wrappersection.appendChild(video);
     }
@@ -605,6 +614,7 @@ function applyVideoSettings(video) {
     // pause the video when touched or clicked
     video.addEventListener("mousedown", function() {video.pause();});
     video.addEventListener("mouseup", function() {video.play();});
+
 
     // mobile
     let swiped = false;
