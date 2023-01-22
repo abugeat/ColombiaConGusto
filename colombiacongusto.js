@@ -500,6 +500,21 @@ for (let anchor in anchors) {
 }
     
     
+// create a function that open the link in a new window
+// when map button is clicked. The current video is paused
+// and the map is opened in a new window
+
+function openMap() {
+    // get current video
+    let currentvideo = document.querySelector("#"+fullpage_api.getActiveSection().item.id + " .vid");
+    currentvideo.pause();
+    // get map link
+    let map = document.getElementById("map");
+    window.open(map.dataset.url,"_blank");
+}
+// get map button class map
+const mapbtn = document.getElementById("map");
+mapbtn.addEventListener('click', openMap);
 
 
 
@@ -528,7 +543,6 @@ function loadVideos() {
         
         // create video
         let video = document.createElement('video');
-        
         // video.src = moments[i].video;
         applyVideoSettings(video);
 
@@ -602,6 +616,11 @@ function updateMomentDescription(i) {
     // change location
     let location = document.querySelector(".location");
     location.innerHTML = moments[i].location;
+    // change map link
+    let map = document.getElementById("map");
+    // TODO: change map link
+    // map.dataset.url = moments[i].map;
+    map.dataset.url = "https://goo.gl/maps/rmT4vSVuN3vjRFkN8";
     // change description
     let description = document.querySelector(".description");
     description.innerHTML = moments[i].description;
@@ -647,7 +666,44 @@ function applyVideoSettings(video) {
 }
 
 
-// check:
-// https://alvarotrigo.com/fullPage/docs/#movetosection-slide
-// https://pagespeedchecklist.com/on-demand-embedded-videos
-// https://css-tricks.com/what-does-playsinline-mean-in-web-video/
+// DESKTOP layout
+function applyLayout() {
+    // if ratio window width/height is bigger than 1,
+    // remove the "width" attributes of the .vid css class.
+    // This is to avoid the video to be stretched
+    
+    // Getting the stylesheet
+    const stylesheet = document.styleSheets[2];
+    let elementRules;
+
+    // looping through all its rules and getting your rule
+    for(let i = 0; i < stylesheet.cssRules.length; i++) {
+        if(stylesheet.cssRules[i].selectorText === '.vid') {
+            elementRules = stylesheet.cssRules[i];
+        }
+    }
+
+    if (mobiledevice==false) {
+        if (window.innerWidth/window.innerHeight > 1) {
+            // modifying the rule in the stylesheet
+            elementRules.style.removeProperty('width');
+            console.log("hi");
+
+        } else {
+            // modifying the rule in the stylesheet
+            elementRules.style.setProperty('width', '100%');
+        }
+    }
+    if (window.innerWidth/window.innerHeight < (1080/1920)) {
+        // modifying the rule in the stylesheet
+        elementRules.style.removeProperty('width');
+    } else {
+        if (mobiledevice==true) {
+            // modifying the rule in the stylesheet
+            elementRules.style.setProperty('width', '100%');
+
+        }
+    }
+}
+applyLayout();
+window.onresize = applyLayout;
