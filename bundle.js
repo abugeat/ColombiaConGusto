@@ -48,6 +48,7 @@ const moments = [
         location: "Santa Marta",
         description: "Hola Colombia",
         anchor: anchors.SantaMarta,
+        map: "https://goo.gl/maps/koQCRWKmKZYVCLR97"
     },
     {
         video: 'videos/IMG_2.mov', 
@@ -55,6 +56,7 @@ const moments = [
         location: "Santa Marta",
         description: "Domingo en Santa Marta",
         anchor: anchors.SantaMarta,
+        map: "https://goo.gl/maps/koQCRWKmKZYVCLR97"
     },
     {
         video: 'videos/IMG_3.mov', 
@@ -62,6 +64,7 @@ const moments = [
         location: "Santa Marta",
         description: "De cara a la siguiente etapa: Tayrona",
         anchor: anchors.SantaMarta,
+        map: "https://goo.gl/maps/JKyzszMH1QwL3UUd8"
     },
     {
         video: 'videos/IMG_4.mov', 
@@ -69,6 +72,7 @@ const moments = [
         location: "Tayrona",
         description: "Vamos!",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_5.mov', 
@@ -76,6 +80,7 @@ const moments = [
         location: "Tayrona",
         description: "Bien llegados a la jungla",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_6.mov', 
@@ -83,6 +88,7 @@ const moments = [
         location: "Tayrona",
         description: "La hermosa vista desde la habitación",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/QcXG5LtVVhzX4eEg9"
     },
     {
         video: 'videos/IMG_7.mov', 
@@ -90,6 +96,7 @@ const moments = [
         location: "Tayrona",
         description: "Siesta con vecinos ruidosos",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/QcXG5LtVVhzX4eEg9"
     },
     {
         video: 'videos/IMG_8.mov', 
@@ -97,6 +104,7 @@ const moments = [
         location: "Tayrona",
         description: "Desayuno con vistas",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/QcXG5LtVVhzX4eEg9"
     },
     {
         video: 'videos/IMG_9.mov', 
@@ -104,6 +112,7 @@ const moments = [
         location: "Tayrona",
         description: "Salida hacia el centro de la jungla",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_10.mov', 
@@ -111,6 +120,7 @@ const moments = [
         location: "Tayrona",
         description: "Zapatos adecuados",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_11.mov', 
@@ -118,6 +128,7 @@ const moments = [
         location: "Tayrona",
         description: "Sin zapatos",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_12.mov', 
@@ -125,6 +136,7 @@ const moments = [
         location: "Tayrona",
         description: "Playa, jungla y nostros",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_13.mov', 
@@ -132,6 +144,7 @@ const moments = [
         location: "Tayrona",
         description: "Los únicos que trabajan",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_14.mov', 
@@ -139,6 +152,7 @@ const moments = [
         location: "Tayrona",
         description: "Un poco de lluvia tropical en el camino de vuelta",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_15.mov', 
@@ -146,6 +160,7 @@ const moments = [
         location: "Tayrona",
         description: "¿Paulette?",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/iPnynjro4zseMsrt7"
     },
     {
         video: 'videos/IMG_16.mov', 
@@ -153,6 +168,7 @@ const moments = [
         location: "Tayrona",
         description: "Día ajetreado",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/QcXG5LtVVhzX4eEg9"
     },
     {
         video: 'videos/IMG_17.mov', 
@@ -160,6 +176,7 @@ const moments = [
         location: "Tayrona",
         description: "La habitacion",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/QcXG5LtVVhzX4eEg9"
     },
     {
         video: 'videos/IMG_18.mov', 
@@ -167,6 +184,7 @@ const moments = [
         location: "Tayrona",
         description: "Siguiente parada: Cartagena",
         anchor: anchors.Tayrona,
+        map: "https://goo.gl/maps/WS6DjyWCXgswiAbc9"
     },
     {
         video: 'videos/IMG_19.mov', 
@@ -174,6 +192,7 @@ const moments = [
         location: "Cartagena",
         description: "Preparación del Día de la Independencia",
         anchor: anchors.Cartagena,
+        map: "https://goo.gl/maps/WUGgSefTPMesPSZc7"
     },
     {
         video: 'videos/IMG_20.mov', 
@@ -181,6 +200,7 @@ const moments = [
         location: "Cartagena",
         description: "El hotel colonial",
         anchor: anchors.Cartagena,
+        map: "https://goo.gl/maps/M7bkV5L6bBoUyTG49"
     },
     {
         video: 'videos/IMG_21.mov', 
@@ -188,6 +208,7 @@ const moments = [
         location: "Cartagena",
         description: "Paseo por Cartagena",
         anchor: anchors.Cartagena,
+        map: "https://goo.gl/maps/LkNfxapwtme4RWGSA"
     },
     {
         video: 'videos/IMG_22.mov', 
@@ -195,6 +216,7 @@ const moments = [
         location: "Cartagena",
         description: "Shooting photo en Cartagena",
         anchor: anchors.Cartagena,
+        map: "https://goo.gl/maps/LkNfxapwtme4RWGSA"
     },
     {
         video: 'videos/IMG_23.mov', 
@@ -202,6 +224,7 @@ const moments = [
         location: "Cartagena",
         description: "Paseo tan bien",
         anchor: anchors.Cartagena,
+        map: "https://goo.gl/maps/LkNfxapwtme4RWGSA"
     },
     {
         video: 'videos/IMG_24.mov', 
@@ -209,6 +232,7 @@ const moments = [
         location: "Cartagena",
         description: "Dirección del aeropuerto para llegar a las islas",
         anchor: anchors.Cartagena,
+        map: "https://goo.gl/maps/XXgWb3nAPb3rvDz68"
     },
     {
         video: 'videos/IMG_25.mov', 
@@ -216,6 +240,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "¡Tierra a la vista!",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/919dyk337kSZHUzGA"
     },
     {
         video: 'videos/IMG_26.mov', 
@@ -223,6 +248,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Aeropuerto chiquito",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/919dyk337kSZHUzGA"
     },
     {
         video: 'videos/IMG_27.mov', 
@@ -230,6 +256,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Daily life en Providencia",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/LFurMjuExjLDPHA26"
     },
     {
         video: 'videos/IMG_28.mov', 
@@ -237,6 +264,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Daily life en Providencia",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/LFurMjuExjLDPHA26"
     },
     {
         video: 'videos/IMG_29.mov', 
@@ -244,6 +272,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "¡Cuidado con los habitantes!",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/LFurMjuExjLDPHA26"
     },
     {
         video: 'videos/IMG_30.mov', 
@@ -251,6 +280,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Daily life en Providencia",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/159C7wpqqYoqpHA98"
     },
     {
         video: 'videos/IMG_31.mov', 
@@ -258,6 +288,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Daily life en Providencia",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/159C7wpqqYoqpHA98"
     },
     {
         video: 'videos/IMG_32.mov', 
@@ -265,6 +296,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Cuando llueve: come langosta",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/MdP5f7dcjLUX6jFu7"
     },
     {
         video: 'videos/IMG_33.mov', 
@@ -272,6 +304,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Daily life en Providencia",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/MdP5f7dcjLUX6jFu7"
     },
     {
         video: 'videos/IMG_34.mov', 
@@ -279,6 +312,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Daily life en Providencia",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/MdP5f7dcjLUX6jFu7"
     },
     {
         video: 'videos/IMG_35.mov', 
@@ -293,6 +327,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "¡Cuidado con los habitantes! Parte 2",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/LFurMjuExjLDPHA26"
     },
     {
         video: 'videos/IMG_37.mov', 
@@ -300,6 +335,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Hora de abandonar el paraíso",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/LFurMjuExjLDPHA26"
     },
     {
         video: 'videos/IMG_38.mov', 
@@ -307,6 +343,7 @@ const moments = [
         location: "Isla de Providencia",
         description: "Hasta la vista",
         anchor: anchors.Providencia,
+        map: "https://goo.gl/maps/LFurMjuExjLDPHA26"
     },
     {
         video: 'videos/IMG_39.mov', 
@@ -314,6 +351,7 @@ const moments = [
         location: "Isla de San Andrés",
         description: "Beauty check en la secunda isla",
         anchor: anchors.SanAndres,
+        map: "https://goo.gl/maps/D2hYpVwZYB4P1TnK6"
     },
     {
         video: 'videos/IMG_40.mov', 
@@ -321,6 +359,7 @@ const moments = [
         location: "Isla de San Andrés",
         description: "El menú está en el techo",
         anchor: anchors.SanAndres,
+        map: "https://goo.gl/maps/RoaBQVK7tS1fpMTYA"
     },
     {
         video: 'videos/IMG_41.mov', 
@@ -328,6 +367,7 @@ const moments = [
         location: "Isla de San Andrés",
         description: "😍",
         anchor: anchors.SanAndres,
+        map: "https://goo.gl/maps/RoaBQVK7tS1fpMTYA"
     },
     {
         video: 'videos/IMG_42.mov', 
@@ -335,6 +375,7 @@ const moments = [
         location: "Isla de San Andrés",
         description: "Terminando el camino en San Andrés antes de ir a Medellín",
         anchor: anchors.SanAndres,
+        map: "https://goo.gl/maps/4WkmRC8CN452G9dP6"
     },
     {
         video: 'videos/IMG_43.mov', 
@@ -342,6 +383,7 @@ const moments = [
         location: "Medellín",
         description: "Medellín, el monstro",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/7ZtVeSnwWRRBx7Nc6"
     },
     {
         video: 'videos/IMG_44.mov', 
@@ -349,6 +391,7 @@ const moments = [
         location: "Medellín",
         description: "Degustación de productos locales",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/Ragv98Zg7eYteTzV7"
     },
     {
         video: 'videos/IMG_45.mov', 
@@ -356,6 +399,7 @@ const moments = [
         location: "Medellín",
         description: "Los chicos de la comuna 13",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/Ragv98Zg7eYteTzV7"
     },
     {
         video: 'videos/IMG_46.mov', 
@@ -363,6 +407,7 @@ const moments = [
         location: "Medellín",
         description: "Panorámica",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/Ragv98Zg7eYteTzV7"
     },
     {
         video: 'videos/IMG_47.mov', 
@@ -370,6 +415,7 @@ const moments = [
         location: "Medellín",
         description: "Panorámica 2",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/Ragv98Zg7eYteTzV7"
     },
     {
         video: 'videos/IMG_48.mov', 
@@ -377,6 +423,7 @@ const moments = [
         location: "Medellín",
         description: "Cascada en el camino a Guatapé",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/G1fM5UBqoQF13SLJA"
     },
     {
         video: 'videos/IMG_49.mov', 
@@ -384,6 +431,7 @@ const moments = [
         location: "Medellín",
         description: "Guatapé",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/Sro4UZxLpU4TmxLW6"
     },
     {
         video: 'videos/IMG_50.mov', 
@@ -391,6 +439,7 @@ const moments = [
         location: "Medellín",
         description: "Ahora, el matrimonio",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/m9XDSFZWQtranvUL7"
     },
     {
         video: 'videos/IMG_51.mov', 
@@ -398,6 +447,7 @@ const moments = [
         location: "Medellín",
         description: "Yoli y Rémi",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/m9XDSFZWQtranvUL7"
     },
     {
         video: 'videos/IMG_52.mov', 
@@ -405,6 +455,7 @@ const moments = [
         location: "Medellín",
         description: "let's dance!",
         anchor: anchors.Medellin,
+        map: "https://goo.gl/maps/m9XDSFZWQtranvUL7"
     },
     {
         video: 'videos/IMG_53.mov', 
@@ -412,6 +463,7 @@ const moments = [
         location: "Bogotá",
         description: "Holá Bogota",
         anchor: anchors.Bogota,
+        map: "https://goo.gl/maps/U5FEDpvPuoWt1t6e7"
     },
     {
         video: 'videos/IMG_54.mov', 
@@ -419,6 +471,7 @@ const moments = [
         location: "Bogotá",
         description: "Los gorditos de Botero para el ultimo dia en Colombia",
         anchor: anchors.Bogota,
+        map: "https://goo.gl/maps/JhKd12yGLoJ9nFVL8"
     },
     {
         video: 'videos/IMG_55.mov', 
@@ -426,6 +479,7 @@ const moments = [
         location: "Bogotá",
         description: "Adios Colombia... 😢",
         anchor: anchors.Bogota,
+        map: "https://goo.gl/maps/U5FEDpvPuoWt1t6e7"
     },
 
 ];
@@ -552,7 +606,7 @@ function loadVideos() {
 
 function loadNearVideos(currentVidIndex) {
     // near videos
-    let nearVids = [currentVidIndex+1,currentVidIndex-1,currentVidIndex+2,currentVidIndex-2];
+    let nearVids = [currentVidIndex, currentVidIndex+1,currentVidIndex-1,currentVidIndex+2,currentVidIndex-2];
     // load near videos if possible
     for (let vidIndex of nearVids) {
         let vid = document.querySelector("#section"+ (vidIndex) +" .wrapper"+ " .vid");
@@ -611,9 +665,7 @@ function updateMomentDescription(i) {
     location.innerHTML = moments[i].location;
     // change map link
     let map = document.getElementById("map");
-    // TODO: change map link
-    // map.dataset.url = moments[i].map;
-    map.dataset.url = "https://goo.gl/maps/rmT4vSVuN3vjRFkN8";
+    map.dataset.url = moments[i].map;
     // change description
     let description = document.querySelector(".description");
     description.innerHTML = moments[i].description;
@@ -678,7 +730,6 @@ function applyLayout() {
         if (window.innerWidth/window.innerHeight > 1) {
             // modifying the rule in the stylesheet
             elementRules.style.removeProperty('width');
-            console.log("hi");
 
         } else {
             // modifying the rule in the stylesheet

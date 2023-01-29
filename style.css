@@ -1,8 +1,7 @@
 body {
 	margin: 0;
 	font-family: "Recoleta-Medium", sans-serif;
-	background-color: darkorange;
-	
+	background-color: darkorange;	
 }
 
 .section{
@@ -41,6 +40,7 @@ body {
 }
 .home {
 	margin:2rem;
+
 }
 #home__title {
 	font-size: 2.5rem;
