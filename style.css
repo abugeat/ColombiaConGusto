@@ -2,6 +2,11 @@ body {
 	margin: 0;
 	font-family: "Recoleta-Medium", sans-serif;
 	background-color: darkorange;	
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),            
+	linear-gradient(127deg, rgb(109, 49, 0), rgba(151, 68, 0,0) 100%),            
+	linear-gradient(336deg, rgba(255, 176, 29), rgba(0,0,255,0) 70.71%);
+	/* linear-gradient(100deg, rgb(151, 68, 0), rgb(255, 176, 29)60%),
+	linear-gradient(180deg, rgb(107, 0, 102), rgb(255, 176, 29)60%); */
 }
 
 .section{
@@ -88,6 +93,7 @@ body {
 .description {
 	/* text-align: right; */
 	filter: drop-shadow(1px 1px orange);
+	height: 2rem;
 }
 .location {
 	/* font-weight: bold; */
@@ -141,7 +147,7 @@ body {
 	font-size: 0.8rem;
 	/* filter: drop-shadow(1px 1px orange); */
 	color: white;
-	border: 0px solid white;
+	border: 1px solid rgba(255,255,255,0);
 	border-radius: 100rem;
 	height:1.7rem;
 	padding: 0rem 0.75rem;
@@ -151,6 +157,7 @@ body {
 }
 .step[current] {
 	background-color: rgba(255, 165, 0, 0.5);
+	border: 1px solid white;
 }
 
 #start {
@@ -220,3 +227,4 @@ body {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
+

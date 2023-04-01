@@ -675,7 +675,31 @@ function updateMomentDescription(i) {
     map.dataset.url = moments[i].map;
     // change description
     let description = document.querySelector(".description");
-    description.innerHTML = moments[i].description;
+    // description.innerHTML = moments[i].description;
+    // remove children of description
+    while (description.firstChild) {
+        description.removeChild(description.firstChild);
+    }
+    // description.textContent = " ";
+    // // reset description
+    typeWrite(moments[i].description, description);
+}
+
+function typeWrite(inputString, element) {
+    const delay = 40;
+    let index = 0;
+    // create span element
+    const span = document.createElement("span");
+    // append span to description
+    element.appendChild(span);
+    const intervalId = setInterval(() => {
+    if (index < inputString.length) {
+        span.textContent += inputString[index];
+        index++;
+    } else {
+        clearInterval(intervalId);
+    }
+    }, delay);
 }
 
 function applyVideoSettings(video) {
@@ -739,10 +763,11 @@ function applyLayout() {
         if (window.innerWidth/window.innerHeight > 1) {
             // modifying the rule in the stylesheet
             elementRules.style.removeProperty('width');
-
+            elementRules.style.setProperty('min-width', '33.333333%');
         } else {
             // modifying the rule in the stylesheet
             elementRules.style.setProperty('width', '100%');
+            elementRules.style.removeProperty('min-width');
         }
     }
     if (window.innerWidth/window.innerHeight < (1080/1920)) {
@@ -755,6 +780,7 @@ function applyLayout() {
 
         }
     }
+
 }
 applyLayout();
 window.onresize = applyLayout;
