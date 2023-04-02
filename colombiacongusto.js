@@ -576,13 +576,18 @@ mapbtn.addEventListener('click', openMap);
 const startbtn = document.getElementById("start");
 const homediv = document.getElementById("home-container");
 startbtn.addEventListener('click', () =>{
-    homediv.remove();
-    // start the starting video
-    let startvideo = document.querySelector("#section0 video");
-    startvideo.play();
-    applyVideoSettings(startvideo);
-    // load all next videos
-    loadVideos();
+    startbtn.classList.add("started");
+    setTimeout(function() {
+        console.log('Waited for the animation to finish');
+        homediv.remove();
+        // start the starting video
+        let startvideo = document.querySelector("#section0 video");
+        startvideo.play();
+        applyVideoSettings(startvideo);
+        // load all next videos
+        loadVideos();
+      }, 700);
+    
 });
 
 function hideSpinner(i) {
